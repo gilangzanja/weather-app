@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <main class="weather-app">
+        <h1>Cuaca hari ini</h1>
+
+        <!--Form Pencarian-->
+        <form id="weatherForm">
+            <input type="text" id="cityInput" placeholder="Masukan nama kota" autocomplete="off" required>
+            <button type="submit">
+                Cari
+            </button>
+        </form>
+        <!--Loading state-->
+        <p id="loading" class="hidden">
+            Mengambil data cuaca....
+        </p>
+        <!--eror-->
+        <p id="errorMessage" class="error hidden"></p>
+
+        <!--Hasil cuaca-->
+        <section id="weatherResult" class="weather-result hidden">
+            <h2 id="cityName">-</h2>
+            <p id="weatherIcon" class="weather-icon" role="img" aria-label="Ikon kondisi cuaca"></p>
+            <div class="weather-info">
+                <div>
+                    <span>🌡️ Temperature</span>
+                    <strong id="temperature">-</strong>
+                </div>
+                <div>
+                    <span>🤗 Feels Like</span>
+                    <strong id="feelsLike">-</strong>
+                </div>
+                <div>
+                    <span>💧Humidity</span>
+                    <strong id="humidity">-</strong>
+                </div>
+                <div>
+                    <span>💨 Wind Speed</span>
+                    <strong id="windSpeed">-</strong>
+                </div>
+                <div>
+                    <span>☁️ Condition</span>
+                    <strong id="weatherDescription">-</strong>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>
